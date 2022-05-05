@@ -1,19 +1,13 @@
+import { Widget } from "./components/Widget";
+
 interface ButtonProps {
   text?: string;
 }
 
 function Button(props: ButtonProps) {
-  return <button className="bg-violet-500 p-2">{props.text ?? 'Default'}</button>
+  return <button className="bg-violet-500 text-violet-100 px-4 h-10 rounded hover:bg-violet-700 transition-colors">{props.text ?? 'Default'}</button>
 }
 
-function App() {
-  return (
-    <div>
-      <Button text="Enviar" />
-      <Button text="Ok" />
-      <Button />
-    </div>
-  )
+export function App() {
+  return <Widget />
 }
-
-export default App
